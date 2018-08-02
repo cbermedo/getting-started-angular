@@ -6,12 +6,15 @@ import { Component } from '@angular/core';
 })
 export class BodyComponent {
 
-    state = true;
+    show = true;
 
     phrase: any = {
         author: 'Woody Allen',
         message: 'No es que tenga miedo de morir, pero no quiero estar allí cuando ocurra'
     };
 
-    changeState = () => this.state = !this.state;
+    authors: string[] = ['Pablo Neruda', 'Gabriela Mistral', 'Nicanor Parra', 'Vicente Huidobro'];
+
+    changeState = () => this.show = !this.show;
+
 }

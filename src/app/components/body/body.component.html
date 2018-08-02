@@ -4,7 +4,7 @@
 
         <hr>
 
-        <div *ngIf="state" class="card text-white bg-dark mb-3" style="width: 100%;">
+        <div *ngIf="show" class="card text-white bg-dark mb-3" style="width: 100%;">
             <div class="card-body">
                 <h5 class="card-title">{{ phrase.author }}</h5>
                 <p class="card-text">{{ phrase.message}}</p>
@@ -19,11 +19,9 @@
         <h1>*ngFor</h1>
         <hr>
         <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item" *ngFor="let author of authors; let i = index">
+                {{ i + 1 }}.- {{ author }}
+            </li>
         </ul>
     </div>
 
